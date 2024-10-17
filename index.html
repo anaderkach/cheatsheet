@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat sheet</title>
+</head>
+<body>
+    <h1 class="header">Cheat Sheet : overflow</h1>
+    <section class="intro">
+        <p>The <strong class="strong">overflow</strong> CSS shorthand property sets the desired behavior when content does not fit in the element's padding box (overflows) in the horizontal and/or vertical direction.</p>
+    </section>
+    <div>
+        <table>
+            <thead>
+                <th class="tag">Tag</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tag">
+                        <span>&lt;overflow: visible&gt;</span></td>
+                    <td>Overflow content is not clipped and may be 
+                        visible outside the element's padding box. 
+                        The element box is not a scroll container. 
+                        This is the default value of the <strong class="strong">overflow</strong> property.</td>
+                </tr>
+                
+                <tr>
+                    <td class="tag">
+                        <span>&lt;overflow: hidden&gt;</span></td>
+                    <td>Overflow content is clipped at the element's padding box. 
+                        There are no scroll bars, and the clipped content is not visible 
+                        (i.e., clipped content is hidden), but the content still exists. 
+                        User agents do not add scroll bars and also do not allow users to view the content 
+                        outside the clipped region by actions such as dragging on a touch screen or using 
+                        the scroll wheel on a mouse. <br>The content can be scrolled programmatically 
+                        (for example, by linking to anchor text, by tabbing to a hidden yet focusable element,
+                         or by setting the value of the <strong class="strong">scrollLeft</strong> property or the <strong class="strong">scrollTo()</strong> method), 
+                        in which case the element box is a scroll container.</td>
+                </tr>
+                <tr>
+                    <td class="tag">
+                        <span>&lt;overflow: clip&gt;</span></td>
+                    <td>Overflow content is clipped at the element's overflow clip edge that 
+                        is defined using the overflow-clip-margin property. As a result, 
+                        content overflows the element's padding box by the  value of 
+                        <strong class="strong">overflow-clip-margin</strong> or by <strong class="strong">0px</strong> if not set. Overflow content 
+                            outside the clipped region is not visible, user agents do not add 
+                            a scroll bar, and programmatic scrolling is also not supported. 
+                            <br>No new formatting context is created. To establish a formatting 
+                            context, use overflow: clip along with display: flow-root. 
+                        The element box is not a scroll container.</td>
+                </tr>
+                <tr>
+                    <td class="tag">
+                        <span>&lt;overflow: scroll&gt;</span></td>
+                    <td>Overflow content is clipped at the element's padding box, and 
+                        overflow content can be scrolled into view using scroll bars. 
+                        User agents display scroll bars whether or not any content is 
+                        overflowing, so in the horizontal and vertical directions if the 
+                        value applies to both directions. <br> The use of this keyword, 
+                        therefore, can prevent scroll bars from appearing and disappearing
+                         as content changes. Printers may still print overflow content. 
+                         The element box is a scroll container.</td>
+                </tr>
+                <tr>
+                    <td class="tag">
+                        <span>&lt;overflow: auto&gt;</span></td>
+                    <td>Overflow content is clipped at the element's padding box, and 
+                        overflow content can be scrolled into view using scroll bars. 
+                        Unlike <strong class="strong">scroll</strong>, user agents display scroll bars only if the content 
+                        is overflowing. <br>If content fits inside the element's padding box, 
+                        it looks the same as with <strong class="strong">visible</strong> but still establishes a new 
+                        formatting context. <br>The element box is a scroll container.</td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+    <div class="note">
+        <strong>Note:</strong> The keyword value <strong class="strong">overlay</strong> is a legacy value alias for <strong class="strong">auto</strong>. 
+        With overlay, the scroll bars are drawn on top of the content instead of taking up space.
+    </div>
+</body>
+</html>
